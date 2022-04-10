@@ -33,7 +33,7 @@ Having offline functionality is paramount to the success of an application that 
 
 ## **Things I learned**
 
--
+-   I spent a lot of time reading the module's indexedDb walkthrough and better understand the query language and network manipulation in Dev Tools.
 
 <br/>
 
