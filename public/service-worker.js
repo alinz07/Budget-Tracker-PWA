@@ -1,12 +1,15 @@
+console.log("service worker is registered");
+
 const APP_PREFIX = "BudgetTracker-";
 const VERSION = "version_01";
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
-    "./index.html",
-    "./css/style.css",
-    "./js/index.js",
-    "./js/idb.js",
+    "/",
+    "/index.html",
+    "/css/style.css",
+    "/js/index.js",
+    "/js/idb.js",
 ];
 
 self.addEventListener("fetch", function (e) {
@@ -31,6 +34,7 @@ self.addEventListener("install", function (e) {
             return cache.addAll(FILES_TO_CACHE);
         })
     );
+    self.skipWaiting();
 });
 
 self.addEventListener("activate", function (e) {
