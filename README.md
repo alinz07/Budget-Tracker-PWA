@@ -4,7 +4,7 @@
 
 ## **Link** to GitHub repo: https://github.com/alinz07/budget-tracker-mod19
 
-## **Link** to app deployed to Heroku:
+## **Link** to app deployed to Heroku: https://budget-tracker-mod19-tlinz.herokuapp.com/
 
 <br/>
 
@@ -34,10 +34,13 @@ Having offline functionality is paramount to the success of an application that 
 ## **Things I learned**
 
 -   I spent a lot of time reading the module's indexedDb walkthrough and better understand the query language and network manipulation in Dev Tools.
+-   I also practiced patience with this app because I couldn't get the back end to work. It turns out I omitted the "I" in MONGODB_URI for the mongodb atlas key when connecting my data from heroku to atlas. A great lesson in going over every single step, chronologically, when setting up the remote server connection and reading heroku logs --tail.
 
 <br/>
 
 ## **What makes this project stand out?**
+
+-   This app is very useful to end users because of it's offline functionality that leverages the browser's indexedDb api and a remote server hosted on MongoDB Atlas
 
 <br/>
 
@@ -59,8 +62,10 @@ GIVEN a budget tracker without an internet connection<br/>
 
 ## **Screenshot of Web Application**
 
-![png-of-webapp](./Develop/src/screenshot.png)
+![gif-of-webapp](./public/img/mod-19.gif)
 
 <br/>
 
 ### **Credits**
+
+The starter code for this application comes from the University of Wisconsin-Milwaukee Extended Campus
