@@ -12,17 +12,39 @@ const FILES_TO_CACHE = [
     "/js/idb.js",
 ];
 
-self.addEventListener("fetch", function (e) {
+self.addEventListener("fetch", function (evt) {
+    // cache successful requests to the API
+    if (evt.request.url.includes("/api/")) {
+        evt.respondWith(
+            //use respondWith to intercept the fetch request
+            caches
+                .open(DATA_CACHE_NAME)
+                .then((cache) => {
+                    return fetch(evt.request)
+                        .then((response) => {
+                            // If the response was good, clone it and store it in the cache.
+                            if (response.status === 200) {
+                                cache.put(evt.request.url, response.clone());
+                            }
+                            return response;
+                        })
+                        .catch((err) => {
+                            // Network request failed, try to get it from the cache.
+                            return cache.match(evt.request);
+                        });
+                })
+                .catch((err) => console.log(err))
+        );
+        return;
+    }
+    // if the request is not for the API, serve static assets using "offline-first" approach.
+    //The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
+    // see https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook#cache-falling-back-to-network
     console.log("fetch request : " + e.request.url);
-    e.respondWith(
-        caches.match(e.request).then(function (request) {
-            if (request) {
-                console.log("responding with cache: " + e.request.url);
-                return request;
-            } else {
-                console.log("file is not cached, fetching : " + e.request.url);
-                return fetch(e.request);
-            }
+
+    evt.respondWith(
+        caches.match(evt.request).then(function (response) {
+            return response || fetch(evt.request);
         })
     );
 });
@@ -54,4 +76,5 @@ self.addEventListener("activate", function (e) {
             );
         })
     );
+    self.clients.claim();
 });
