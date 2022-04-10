@@ -16,6 +16,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+// routes
+app.use(require("./routes/api.js"));
+
 mongoose.connect(
     process.env.MONGODB_URI ||
         "mongodb://localhost:27017/budget-tracker-mod19-tlinz",
@@ -25,9 +28,6 @@ mongoose.connect(
         useUnifiedTopology: true,
     }
 );
-
-// routes
-app.use(require("./routes/api.js"));
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
