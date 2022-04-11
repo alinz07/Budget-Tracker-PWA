@@ -35,12 +35,13 @@ Having offline functionality is paramount to the success of an application that 
 
 -   I spent a lot of time reading the module's indexedDb walkthrough and better understand the query language and network manipulation in Dev Tools.
 -   I also practiced patience with this app because I couldn't get the back end to work. It turns out I omitted the "I" in MONGODB_URI for the mongodb atlas key when connecting my data from heroku to atlas. A great lesson in going over every single step, chronologically, when setting up the remote server connection and reading heroku logs --tail.
+-   I learned about chrome's ability to download PWAs and how to modify the downloaded app target to not use a chrome proxy, but rather chrome itself, so that the app looks like a standalone app and so I don't have to download a chrome_proxy app.
 
 <br/>
 
 ## **What makes this project stand out?**
 
--   This app is very useful to end users because of it's offline functionality that leverages the browser's indexedDb api and a remote server hosted on MongoDB Atlas
+-   This app is very useful to end users because of it's offline functionality that leverages service workers for caching the static files, the browser's indexedDb api for transactions, and a remote server hosted on MongoDB Atlas.
 
 <br/>
 
