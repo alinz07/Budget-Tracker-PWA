@@ -25,6 +25,7 @@ const FILES_TO_CACHE = [
 self.addEventListener("fetch", function (evt) {
     // cache successful requests to the API
     if (evt.request.url.includes("/api/")) {
+        console.log("api request sent");
         evt.respondWith(
             //use respondWith to intercept the fetch request
             caches
