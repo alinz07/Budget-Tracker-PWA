@@ -2,6 +2,7 @@ console.log("service worker is registered");
 
 const APP_PREFIX = "BudgetTracker-";
 const VERSION = "version_01";
+const DATA_CACHE_NAME = "data-cache-v2";
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
@@ -49,7 +50,7 @@ self.addEventListener("fetch", function (evt) {
     // if the request is not for the API, serve static assets using "offline-first" approach.
     //The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
     // see https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook#cache-falling-back-to-network
-    console.log("fetch request : " + e.request.url);
+    console.log("fetch request : " + evt.request.url);
 
     evt.respondWith(
         caches.match(evt.request).then(function (response) {
