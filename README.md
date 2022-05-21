@@ -8,9 +8,9 @@
 
 <br/>
 
-## **Motivation**
+## **Motivation and Code Overview**
 
-Update an existing budget tracker application to allow for offline access and functionality.
+Update an existing budget tracker application to allow for offline access and functionality. The Budget Tracker PWA has a very simple data structure that modularizes the models from the html and css assets in the public folder, a folder for the api routes to update the db once the user has internet connectivity and a server.js file at the root to run the application with the command node server.js.
 
 <br/>
 
