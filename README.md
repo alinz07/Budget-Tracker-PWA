@@ -8,12 +8,6 @@
 
 <br/>
 
-## **Motivation and Code Overview**
-
-Update an existing budget tracker application to allow for offline access and functionality. The Budget Tracker PWA has a very simple data structure that modularizes the models from the html and css assets that are in the public folder, a folder for the api routes to update the db once the user has internet connectivity and a server.js file at the root to run the application on the local server. To download and use the app, any user need only visit the deployed app on Heroku and download to their local machine.
-
-<br/>
-
 ## **Table of Contents**
 
 [Technologies Used](#technologies-used)<br/>
@@ -24,6 +18,12 @@ Update an existing budget tracker application to allow for offline access and fu
 [User Story](#user-story)<br/>
 [Screenshot of Web Application](#screenshot-of-web-application)<br/>
 [Credits](#credits)<br/>
+
+<br/>
+
+## **Motivation and Code Overview**
+
+Update an existing budget tracker application to allow for offline access and functionality. The Budget Tracker PWA has a very simple data structure that modularizes the models from the html and css assets that are in the public folder, a folder for the api routes to update the db once the user has internet connectivity and a server.js file at the root to run the application on the local server. To download and use the app, any user need only visit the deployed app on Heroku and download to their local machine.
 
 <br/>
 
