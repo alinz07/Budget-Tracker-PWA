@@ -46,7 +46,7 @@ Update an existing budget tracker application to allow for offline access and fu
 Clone Repository:
 
 ```
-git clone git@github.com:alinz07/Budget-Tracker-PWA.git
+git clone https://github.com/alinz07/Budget-Tracker-PWA.git
 ```
 
 Install Dependencies:
