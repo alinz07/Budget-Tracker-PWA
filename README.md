@@ -14,7 +14,7 @@
 [Technologies Used](#technologies-used)<br/>
 [User Story](#user-story)<br/>
 [Instruction to Run App](#instructions-to-run-app) <br/>
-[Screenshot of Web Application](#screenshot-of-web-application)<br/>
+[Screenshot](#screenshot)<br/>
 [Things I learned](#things-i-learned) <br/>
 [What makes this project stand out?](#what-makes-this-project-stand-out) <br/>
 [Credits](#credits)<br/>
